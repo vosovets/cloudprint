@@ -140,4 +140,10 @@ static NSString *__sessionToken = nil;
     [self enqueueHTTPRequestOperation:operation];
 }
 
+#pragma mark - Extra
+
+- (BOOL)isLoggedIn {
+    return __sessionToken ? YES : NO;
+}
+
 @end

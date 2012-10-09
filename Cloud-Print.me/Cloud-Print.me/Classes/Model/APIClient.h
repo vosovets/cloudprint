@@ -45,5 +45,8 @@ typedef enum StatusCodeError {
 - (void)ordersWithSuccess:(void (^)(NSArray *))successBlock
                   failure:(void (^)(NSError *))failureBlock;
 
+#pragma mark - Extra
+
+- (BOOL)isLoggedIn;
 
 @end

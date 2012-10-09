@@ -38,10 +38,25 @@
 
 - (void)userProfileWithSuccess:(void (^)(NSDictionary *))successBlock
                        failure:(void (^)(NSError *))failureBlock {
+    
+    NSDictionary *response = @{@"Имя": @"Tatyana, Omnia",
+    @"Телефон": @" +380675758599",
+    @"Мобильный телефон": @"+38-067-575-85-99",
+    @"E-mail": @"frp.omnia@gmail.com",
+    @"Страна": @"Украина",
+    @"Регион": @"Харьковская обл.",
+    @"Город": @"Харьков",
+    @"Адрес": @"",
+    @"Адрес доставки": @"",
+    @"Служба доставки": @"",
+    @"Адрес склада доставки, номер склада": @"",
+    @"Получатель": @""};
+    
+    
     int64_t delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        successBlock(@{@"username": @"Иван Иванович"});
+        successBlock(response);
     });
 }
 

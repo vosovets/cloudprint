@@ -7,8 +7,12 @@
 //
 
 #import "ProfileViewController.h"
+#import "TwoLabelsCustomCell.h"
+#import "APIClient.h"
 
 @interface ProfileViewController ()
+
+@property (nonatomic, strong) NSDictionary *userInfo;
 
 @end
 
@@ -42,28 +46,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    __weak ProfileViewController *weakSelf = self;
+    
+    [[APIClient sharedClient] userProfileWithSuccess:^(NSDictionary *response) {
+        weakSelf.userInfo = response;
+        [self.tableView reloadData];
+        
+    } failure:^(NSError *error) {
+        // TODO: show error
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.userInfo ? [self.userInfo count]: 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ProfileTableCell";
+    TwoLabelsCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSString *key = [[self.userInfo allKeys] objectAtIndex:indexPath.row];
+    cell.firstLabel.text = key;
+    cell.secondLabel.text = [self.userInfo valueForKey:key];
     
     return cell;
 }

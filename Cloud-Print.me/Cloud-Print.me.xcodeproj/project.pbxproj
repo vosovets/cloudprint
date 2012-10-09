@@ -43,6 +43,7 @@
 		962259F11624A11500711EB2 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259E41624A11500711EB2 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		962259F21624A11500711EB2 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259E71624A11500711EB2 /* APIClient.m */; };
 		962259F91624AF9B00711EB2 /* TestAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259F81624AF9B00711EB2 /* TestAPIClient.m */; };
+		962259FF1624B8FD00711EB2 /* TwoLabelsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		962259E71624A11500711EB2 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		962259F71624AF9B00711EB2 /* TestAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAPIClient.h; sourceTree = "<group>"; };
 		962259F81624AF9B00711EB2 /* TestAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAPIClient.m; sourceTree = "<group>"; };
+		962259FD1624B8FC00711EB2 /* TwoLabelsCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLabelsCustomCell.h; sourceTree = "<group>"; };
+		962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLabelsCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				962259C91624104100711EB2 /* BalanceViewController.m */,
 				962259CB1624104E00711EB2 /* OrdersViewController.h */,
 				962259CC1624104E00711EB2 /* OrdersViewController.m */,
+				962259FD1624B8FC00711EB2 /* TwoLabelsCustomCell.h */,
+				962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				962259F11624A11500711EB2 /* UIImageView+AFNetworking.m in Sources */,
 				962259F21624A11500711EB2 /* APIClient.m in Sources */,
 				962259F91624AF9B00711EB2 /* TestAPIClient.m in Sources */,
+				962259FF1624B8FD00711EB2 /* TwoLabelsCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
