@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ProfileViewController.h
 //  Cloud-Print.me
 //
 //  Created by Vadim Osovets on 09.10.12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ProfileViewController : UITableViewController
 
 @end

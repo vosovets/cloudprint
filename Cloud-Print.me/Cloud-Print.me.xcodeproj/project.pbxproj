@@ -14,13 +14,23 @@
 		9622597B1623F29C00711EB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622597A1623F29C00711EB2 /* main.m */; };
 		962259881623F29C00711EB2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962259861623F29C00711EB2 /* MainStoryboard.storyboard */; };
 		9622599B1624050D00711EB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259981624050D00711EB2 /* AppDelegate.m */; };
-		9622599C1624050D00711EB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622599A1624050D00711EB2 /* ViewController.m */; };
 		962259A41624051700711EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9622599E1624051700711EB2 /* Default-568h@2x.png */; };
 		962259A51624051700711EB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9622599F1624051700711EB2 /* Default.png */; };
 		962259A61624051700711EB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259A01624051700711EB2 /* Default@2x.png */; };
 		962259A71624051700711EB2 /* DefaultBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259A11624051700711EB2 /* DefaultBackground.png */; };
 		962259AB1624059D00711EB2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259AA1624059D00711EB2 /* icon.png */; };
 		962259AD162405B300711EB2 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259AC162405B300711EB2 /* icon@2x.png */; };
+		962259B41624080E00711EB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259B31624080E00711EB2 /* HomeViewController.m */; };
+		962259BC16240AA600711EB2 /* balance.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B616240AA600711EB2 /* balance.png */; };
+		962259BD16240AA600711EB2 /* delivery.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B716240AA600711EB2 /* delivery.png */; };
+		962259BE16240AA600711EB2 /* messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B816240AA600711EB2 /* messages.png */; };
+		962259BF16240AA600711EB2 /* myFiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B916240AA600711EB2 /* myFiles.png */; };
+		962259C016240AA600711EB2 /* orders.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259BA16240AA600711EB2 /* orders.png */; };
+		962259C116240AA600711EB2 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259BB16240AA600711EB2 /* profile.png */; };
+		962259C416240E7700711EB2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C316240E7700711EB2 /* ProfileViewController.m */; };
+		962259C71624102F00711EB2 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C61624102F00711EB2 /* MessagesViewController.m */; };
+		962259CA1624104100711EB2 /* BalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C91624104100711EB2 /* BalanceViewController.m */; };
+		962259CD1624104F00711EB2 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259CC1624104E00711EB2 /* OrdersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,14 +45,28 @@
 		962259871623F29C00711EB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		962259971624050D00711EB2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		962259981624050D00711EB2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		962259991624050D00711EB2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9622599A1624050D00711EB2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9622599E1624051700711EB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9622599F1624051700711EB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		962259A01624051700711EB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		962259A11624051700711EB2 /* DefaultBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultBackground.png; sourceTree = "<group>"; };
 		962259AA1624059D00711EB2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		962259AC162405B300711EB2 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
+		962259B21624080E00711EB2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		962259B31624080E00711EB2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		962259B616240AA600711EB2 /* balance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balance.png; sourceTree = "<group>"; };
+		962259B716240AA600711EB2 /* delivery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delivery.png; sourceTree = "<group>"; };
+		962259B816240AA600711EB2 /* messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messages.png; sourceTree = "<group>"; };
+		962259B916240AA600711EB2 /* myFiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFiles.png; sourceTree = "<group>"; };
+		962259BA16240AA600711EB2 /* orders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orders.png; sourceTree = "<group>"; };
+		962259BB16240AA600711EB2 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		962259C216240E7700711EB2 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		962259C316240E7700711EB2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		962259C51624102E00711EB2 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		962259C61624102F00711EB2 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		962259C81624104100711EB2 /* BalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceViewController.h; sourceTree = "<group>"; };
+		962259C91624104100711EB2 /* BalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceViewController.m; sourceTree = "<group>"; };
+		962259CB1624104E00711EB2 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
+		962259CC1624104E00711EB2 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +135,9 @@
 		962259961624050D00711EB2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				962259AE162407EC00711EB2 /* ViewControllers */,
 				962259971624050D00711EB2 /* AppDelegate.h */,
 				962259981624050D00711EB2 /* AppDelegate.m */,
-				962259991624050D00711EB2 /* ViewController.h */,
-				9622599A1624050D00711EB2 /* ViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -122,6 +145,7 @@
 		9622599D1624051700711EB2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				962259B516240AA600711EB2 /* Home */,
 				9622599E1624051700711EB2 /* Default-568h@2x.png */,
 				9622599F1624051700711EB2 /* Default.png */,
 				962259A01624051700711EB2 /* Default@2x.png */,
@@ -130,6 +154,36 @@
 				962259AC162405B300711EB2 /* icon@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		962259AE162407EC00711EB2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				962259B21624080E00711EB2 /* HomeViewController.h */,
+				962259B31624080E00711EB2 /* HomeViewController.m */,
+				962259C216240E7700711EB2 /* ProfileViewController.h */,
+				962259C316240E7700711EB2 /* ProfileViewController.m */,
+				962259C51624102E00711EB2 /* MessagesViewController.h */,
+				962259C61624102F00711EB2 /* MessagesViewController.m */,
+				962259C81624104100711EB2 /* BalanceViewController.h */,
+				962259C91624104100711EB2 /* BalanceViewController.m */,
+				962259CB1624104E00711EB2 /* OrdersViewController.h */,
+				962259CC1624104E00711EB2 /* OrdersViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		962259B516240AA600711EB2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				962259B616240AA600711EB2 /* balance.png */,
+				962259B716240AA600711EB2 /* delivery.png */,
+				962259B816240AA600711EB2 /* messages.png */,
+				962259B916240AA600711EB2 /* myFiles.png */,
+				962259BA16240AA600711EB2 /* orders.png */,
+				962259BB16240AA600711EB2 /* profile.png */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +245,12 @@
 				962259A71624051700711EB2 /* DefaultBackground.png in Resources */,
 				962259AB1624059D00711EB2 /* icon.png in Resources */,
 				962259AD162405B300711EB2 /* icon@2x.png in Resources */,
+				962259BC16240AA600711EB2 /* balance.png in Resources */,
+				962259BD16240AA600711EB2 /* delivery.png in Resources */,
+				962259BE16240AA600711EB2 /* messages.png in Resources */,
+				962259BF16240AA600711EB2 /* myFiles.png in Resources */,
+				962259C016240AA600711EB2 /* orders.png in Resources */,
+				962259C116240AA600711EB2 /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +263,11 @@
 			files = (
 				9622597B1623F29C00711EB2 /* main.m in Sources */,
 				9622599B1624050D00711EB2 /* AppDelegate.m in Sources */,
-				9622599C1624050D00711EB2 /* ViewController.m in Sources */,
+				962259B41624080E00711EB2 /* HomeViewController.m in Sources */,
+				962259C416240E7700711EB2 /* ProfileViewController.m in Sources */,
+				962259C71624102F00711EB2 /* MessagesViewController.m in Sources */,
+				962259CA1624104100711EB2 /* BalanceViewController.m in Sources */,
+				962259CD1624104F00711EB2 /* OrdersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
