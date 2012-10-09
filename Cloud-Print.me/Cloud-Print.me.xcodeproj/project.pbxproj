@@ -12,16 +12,19 @@
 		962259731623F29C00711EB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962259721623F29C00711EB2 /* CoreGraphics.framework */; };
 		962259791623F29C00711EB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 962259771623F29C00711EB2 /* InfoPlist.strings */; };
 		9622597B1623F29C00711EB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622597A1623F29C00711EB2 /* main.m */; };
-		9622597F1623F29C00711EB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622597E1623F29C00711EB2 /* AppDelegate.m */; };
-		962259811623F29C00711EB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259801623F29C00711EB2 /* Default.png */; };
-		962259831623F29C00711EB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259821623F29C00711EB2 /* Default@2x.png */; };
-		962259851623F29C00711EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259841623F29C00711EB2 /* Default-568h@2x.png */; };
 		962259881623F29C00711EB2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962259861623F29C00711EB2 /* MainStoryboard.storyboard */; };
-		9622598B1623F29C00711EB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622598A1623F29C00711EB2 /* ViewController.m */; };
+		9622599B1624050D00711EB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259981624050D00711EB2 /* AppDelegate.m */; };
+		9622599C1624050D00711EB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9622599A1624050D00711EB2 /* ViewController.m */; };
+		962259A41624051700711EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9622599E1624051700711EB2 /* Default-568h@2x.png */; };
+		962259A51624051700711EB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9622599F1624051700711EB2 /* Default.png */; };
+		962259A61624051700711EB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259A01624051700711EB2 /* Default@2x.png */; };
+		962259A71624051700711EB2 /* DefaultBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259A11624051700711EB2 /* DefaultBackground.png */; };
+		962259AB1624059D00711EB2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259AA1624059D00711EB2 /* icon.png */; };
+		962259AD162405B300711EB2 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259AC162405B300711EB2 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9622596A1623F29C00711EB2 /* Cloud-Print.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cloud-Print.me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9622596A1623F29C00711EB2 /* CloudPrint.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudPrint.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9622596E1623F29C00711EB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		962259701623F29C00711EB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		962259721623F29C00711EB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -29,14 +32,17 @@
 		962259781623F29C00711EB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9622597A1623F29C00711EB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9622597C1623F29C00711EB2 /* Cloud-Print.me-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cloud-Print.me-Prefix.pch"; sourceTree = "<group>"; };
-		9622597D1623F29C00711EB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9622597E1623F29C00711EB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		962259801623F29C00711EB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		962259821623F29C00711EB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		962259841623F29C00711EB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		962259871623F29C00711EB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		962259891623F29C00711EB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9622598A1623F29C00711EB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		962259971624050D00711EB2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		962259981624050D00711EB2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		962259991624050D00711EB2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9622599A1624050D00711EB2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9622599E1624051700711EB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9622599F1624051700711EB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		962259A01624051700711EB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		962259A11624051700711EB2 /* DefaultBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultBackground.png; sourceTree = "<group>"; };
+		962259AA1624059D00711EB2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		962259AC162405B300711EB2 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,7 @@
 		9622596B1623F29C00711EB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9622596A1623F29C00711EB2 /* Cloud-Print.me.app */,
+				9622596A1623F29C00711EB2 /* CloudPrint.me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,12 +89,10 @@
 		962259741623F29C00711EB2 /* Cloud-Print.me */ = {
 			isa = PBXGroup;
 			children = (
-				9622597D1623F29C00711EB2 /* AppDelegate.h */,
-				9622597E1623F29C00711EB2 /* AppDelegate.m */,
+				962259961624050D00711EB2 /* Classes */,
 				962259861623F29C00711EB2 /* MainStoryboard.storyboard */,
-				962259891623F29C00711EB2 /* ViewController.h */,
-				9622598A1623F29C00711EB2 /* ViewController.m */,
 				962259751623F29C00711EB2 /* Supporting Files */,
+				9622599D1624051700711EB2 /* Resources */,
 			);
 			path = "Cloud-Print.me";
 			sourceTree = "<group>";
@@ -100,11 +104,32 @@
 				962259771623F29C00711EB2 /* InfoPlist.strings */,
 				9622597A1623F29C00711EB2 /* main.m */,
 				9622597C1623F29C00711EB2 /* Cloud-Print.me-Prefix.pch */,
-				962259801623F29C00711EB2 /* Default.png */,
-				962259821623F29C00711EB2 /* Default@2x.png */,
-				962259841623F29C00711EB2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		962259961624050D00711EB2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				962259971624050D00711EB2 /* AppDelegate.h */,
+				962259981624050D00711EB2 /* AppDelegate.m */,
+				962259991624050D00711EB2 /* ViewController.h */,
+				9622599A1624050D00711EB2 /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9622599D1624051700711EB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9622599E1624051700711EB2 /* Default-568h@2x.png */,
+				9622599F1624051700711EB2 /* Default.png */,
+				962259A01624051700711EB2 /* Default@2x.png */,
+				962259A11624051700711EB2 /* DefaultBackground.png */,
+				962259AA1624059D00711EB2 /* icon.png */,
+				962259AC162405B300711EB2 /* icon@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +149,7 @@
 			);
 			name = "Cloud-Print.me";
 			productName = "Cloud-Print.me";
-			productReference = 9622596A1623F29C00711EB2 /* Cloud-Print.me.app */;
+			productReference = 9622596A1623F29C00711EB2 /* CloudPrint.me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,10 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				962259791623F29C00711EB2 /* InfoPlist.strings in Resources */,
-				962259811623F29C00711EB2 /* Default.png in Resources */,
-				962259831623F29C00711EB2 /* Default@2x.png in Resources */,
-				962259851623F29C00711EB2 /* Default-568h@2x.png in Resources */,
 				962259881623F29C00711EB2 /* MainStoryboard.storyboard in Resources */,
+				962259A41624051700711EB2 /* Default-568h@2x.png in Resources */,
+				962259A51624051700711EB2 /* Default.png in Resources */,
+				962259A61624051700711EB2 /* Default@2x.png in Resources */,
+				962259A71624051700711EB2 /* DefaultBackground.png in Resources */,
+				962259AB1624059D00711EB2 /* icon.png in Resources */,
+				962259AD162405B300711EB2 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9622597B1623F29C00711EB2 /* main.m in Sources */,
-				9622597F1623F29C00711EB2 /* AppDelegate.m in Sources */,
-				9622598B1623F29C00711EB2 /* ViewController.m in Sources */,
+				9622599B1624050D00711EB2 /* AppDelegate.m in Sources */,
+				9622599C1624050D00711EB2 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +286,7 @@
 				GCC_PREFIX_HEADER = "Cloud-Print.me/Cloud-Print.me-Prefix.pch";
 				INFOPLIST_FILE = "Cloud-Print.me/Cloud-Print.me-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudPrint.me;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,7 +299,7 @@
 				GCC_PREFIX_HEADER = "Cloud-Print.me/Cloud-Print.me-Prefix.pch";
 				INFOPLIST_FILE = "Cloud-Print.me/Cloud-Print.me-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudPrint.me;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
