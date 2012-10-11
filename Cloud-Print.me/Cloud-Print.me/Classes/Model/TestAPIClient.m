@@ -8,6 +8,8 @@
 
 #import "TestAPIClient.h"
 
+static NSString *__userEmail = nil;
+
 @implementation TestAPIClient
 
 #pragma mark - Login & Logout
@@ -16,6 +18,7 @@
               password:(NSString *)password
            withSuccess:(void (^)(NSDictionary *))successBlock
                failure:(void (^)(NSError *))failureBlock {
+    __userEmail = email;
     
     int64_t delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
@@ -39,18 +42,19 @@
 - (void)userProfileWithSuccess:(void (^)(NSDictionary *))successBlock
                        failure:(void (^)(NSError *))failureBlock {
     
-    NSDictionary *response = @{@"Имя": @"Tatyana, Omnia",
-    @"Телефон": @" +380675758599",
-    @"Мобильный телефон": @"+38-067-575-85-99",
-    @"E-mail": @"frp.omnia@gmail.com",
-    @"Страна": @"Украина",
-    @"Регион": @"Харьковская обл.",
-    @"Город": @"Харьков",
-    @"Адрес": @"",
-    @"Адрес доставки": @"",
-    @"Служба доставки": @"",
-    @"Адрес склада доставки, номер склада": @"",
-    @"Получатель": @""};
+    NSDictionary *response = @{@"userInfo":
+    @[@{@"Имя": @"Tatyana, Omnia"},
+    @{@"Телефон": @" +380675758599"},
+    @{@"Мобильный телефон": @"+38-067-575-85-99"},
+    @{@"E-mail": @"frp.omnia@gmail.com"},
+    @{@"Страна": @"Украина"},
+    @{@"Регион": @"Харьковская обл."},
+    @{@"Город": @"Харьков"},
+    @{@"Адрес": @""},
+    @{@"Адрес доставки": @""},
+    @{@"Служба доставки": @""},
+    @{@"Адрес склада доставки, номер склада": @""},
+    @{@"Получатель": @""}]};
     
     
     int64_t delayInSeconds = 1.0;
@@ -73,6 +77,15 @@
 - (void)ordersWithSuccess:(void (^)(NSArray *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
     
+}
+
+- (BOOL)isLoggedIn {
+
+    return __userEmail ? YES : NO;
+}
+
+- (NSString *)userEmail {
+    return __userEmail;
 }
 
 @end

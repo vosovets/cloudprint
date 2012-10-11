@@ -17,6 +17,7 @@
 NSString * const kBaseURLString = @"http://www.cat-tie.ru";
 
 static NSString *__sessionToken = nil;
+static NSString *__userEmail = nil;
 
 @implementation APIClient
 
@@ -54,12 +55,12 @@ static NSString *__sessionToken = nil;
               password:(NSString *)password
            withSuccess:(void (^)(NSDictionary *))successBlock
                failure:(void (^)(NSError *))failureBlock {
-    
+    __userEmail = email;
 }
 
 - (void)logoutWithSuccess:(void (^)(NSDictionary *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
-    
+    __userEmail = nil;
 }
 
 #pragma mark - Functionality
@@ -144,6 +145,10 @@ static NSString *__sessionToken = nil;
 
 - (BOOL)isLoggedIn {
     return __sessionToken ? YES : NO;
+}
+
+- (NSString *)userEmail {
+    return __userEmail;
 }
 
 @end

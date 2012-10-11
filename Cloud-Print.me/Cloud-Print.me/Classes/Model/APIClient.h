@@ -48,5 +48,6 @@ typedef enum StatusCodeError {
 #pragma mark - Extra
 
 - (BOOL)isLoggedIn;
+- (NSString *)userEmail;
 
 @end

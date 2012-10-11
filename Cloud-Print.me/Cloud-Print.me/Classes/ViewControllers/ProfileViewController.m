@@ -12,7 +12,7 @@
 
 @interface ProfileViewController ()
 
-@property (nonatomic, strong) NSDictionary *userInfo;
+@property (nonatomic, strong) NSArray *userInfo;
 
 @end
 
@@ -52,7 +52,7 @@
     __weak ProfileViewController *weakSelf = self;
     
     [[APIClient sharedClient] userProfileWithSuccess:^(NSDictionary *response) {
-        weakSelf.userInfo = response;
+        weakSelf.userInfo = response[@"userInfo"];
         [self.tableView reloadData];
         
     } failure:^(NSError *error) {
@@ -78,10 +78,11 @@
     static NSString *CellIdentifier = @"ProfileTableCell";
     TwoLabelsCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NSDictionary *info = [self.userInfo objectAtIndex:indexPath.row];
+    
     // Configure the cell...
-    NSString *key = [[self.userInfo allKeys] objectAtIndex:indexPath.row];
-    cell.firstLabel.text = key;
-    cell.secondLabel.text = [self.userInfo valueForKey:key];
+    cell.firstLabel.text = [[info allKeys] objectAtIndex:0];
+    cell.secondLabel.text = [info valueForKey:cell.firstLabel.text];
     
     return cell;
 }

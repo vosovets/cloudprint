@@ -7,12 +7,11 @@
 //
 
 #import "HomeViewController.h"
+#import "APIClient.h"
 
-@interface HomeViewController ()
-
-@end
-
-@implementation HomeViewController
+@implementation HomeViewController {
+    __weak IBOutlet UILabel *_userNameLabel;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -46,6 +45,14 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = YES;
+    
+    Debug(@"User email: %@", [[APIClient sharedClient] userEmail]);
+    
+    if (![[APIClient sharedClient] isLoggedIn]) {
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    } else {
+        _userNameLabel.text = [[APIClient sharedClient] userEmail];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,4 +139,8 @@
      */
 }
 
+- (void)viewDidUnload {
+    _userNameLabel = nil;
+    [super viewDidUnload];
+}
 @end

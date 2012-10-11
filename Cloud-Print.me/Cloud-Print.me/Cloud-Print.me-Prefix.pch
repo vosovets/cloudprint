@@ -17,7 +17,7 @@
 #define Debug(s, ...) { \
 NSString *dbgMessage = [NSString stringWithFormat : (s), ##__VA_ARGS__];\
 NSString *dbgTitle = [NSString stringWithFormat:@"%s:(%d)", __PRETTY_FUNCTION__, __LINE__];\
-fprintf(stderr,"%s\t%s", [dbgTitle UTF8String], [dbgMessage UTF8String]);\
+fprintf(stderr,"%s\t%s\n", [dbgTitle UTF8String], [dbgMessage UTF8String]);\
 }
 #else
 #define Debug(s, ...)
