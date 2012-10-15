@@ -60,11 +60,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile.png" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-Tx-fkv">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="LYo-Au-5l0"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profil.png" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-Tx-fkv"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -94,12 +90,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="messages.png" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-fA-CMp">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="UTA-9D-ALh"/>
-                                                        <constraint firstAttribute="height" constant="50" id="h1p-Tu-u9o"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-fA-CMp"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -129,12 +120,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="balance.png" translatesAutoresizingMaskIntoConstraints="NO" id="M8Z-wW-6st">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="hPq-jo-huZ"/>
-                                                        <constraint firstAttribute="height" constant="50" id="pXD-ck-GPJ"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="balance.png" translatesAutoresizingMaskIntoConstraints="NO" id="M8Z-wW-6st"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -164,12 +150,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="orders.png" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-RJ-AeZ">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="QvE-yU-xuc"/>
-                                                        <constraint firstAttribute="height" constant="50" id="SBU-Sm-f8G"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="zakaz.png" translatesAutoresizingMaskIntoConstraints="NO" id="5rB-RJ-AeZ"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -199,12 +180,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="myFiles.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nuy-5G-lEY">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="hrr-TF-2HQ"/>
-                                                        <constraint firstAttribute="height" constant="50" id="uI5-DS-w32"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="balance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nuy-5G-lEY"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -231,12 +207,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="delivery.png" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-vd-gue">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="0uX-NX-9g5"/>
-                                                        <constraint firstAttribute="height" constant="50" id="58y-wg-lY6"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dostavka.png" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-vd-gue"/>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -458,14 +429,43 @@ ENCb0L7Qs9C40L0
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VCy-mH-KpW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCellID" id="VCy-mH-KpW" customClass="MessageTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="message description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qx-EK-BbM">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="264" id="7gO-Dc-sEM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="message date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJE-Z5-k0a">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="142" id="Hx1-Yu-Dp4"/>
+                                                <constraint firstAttribute="height" constant="21" id="eyS-EC-NBS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="iJE-Z5-k0a" firstAttribute="top" secondItem="VCy-mH-KpW" secondAttribute="top" constant="20" type="default" id="78R-B7-vkb"/>
+                                    <constraint firstItem="2Qx-EK-BbM" firstAttribute="top" secondItem="VCy-mH-KpW" secondAttribute="top" type="default" id="FI5-Wy-bFR"/>
+                                    <constraint firstAttribute="trailing" secondItem="iJE-Z5-k0a" secondAttribute="trailing" constant="20" type="default" id="Vw0-eS-jiX"/>
+                                    <constraint firstItem="2Qx-EK-BbM" firstAttribute="leading" secondItem="VCy-mH-KpW" secondAttribute="leading" constant="20" type="default" id="mMG-0Y-6tQ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="messageDate" destination="iJE-Z5-k0a" id="pr0-hq-sr8"/>
+                                    <outlet property="messageDescription" destination="2Qx-EK-BbM" id="dF7-us-KtP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -499,12 +499,11 @@ ENCb0L7Qs9C40L0
         </scene>
     </scenes>
     <resources>
-        <image name="balance.png" width="60" height="49"/>
-        <image name="delivery.png" width="69" height="54"/>
-        <image name="messages.png" width="46" height="52"/>
-        <image name="myFiles.png" width="71" height="48"/>
-        <image name="orders.png" width="66" height="55"/>
-        <image name="profile.png" width="50" height="60"/>
+        <image name="balance.png" width="50" height="50"/>
+        <image name="chat.png" width="50" height="50"/>
+        <image name="dostavka.png" width="50" height="50"/>
+        <image name="profil.png" width="50" height="50"/>
+        <image name="zakaz.png" width="50" height="50"/>
     </resources>
     <classes>
         <class className="BalanceViewController" superclassName="UITableViewController">
@@ -515,8 +514,12 @@ ENCb0L7Qs9C40L0
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+        </class>
+        <class className="MessageTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageTableViewCell.h"/>
             <relationships>
-                <relationship kind="action" name="loginClicked:"/>
+                <relationship kind="outlet" name="messageDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="messageDescription" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MessagesViewController" superclassName="UITableViewController">

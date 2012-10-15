@@ -22,11 +22,6 @@
 		962259AD162405B300711EB2 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259AC162405B300711EB2 /* icon@2x.png */; };
 		962259B41624080E00711EB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259B31624080E00711EB2 /* HomeViewController.m */; };
 		962259BC16240AA600711EB2 /* balance.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B616240AA600711EB2 /* balance.png */; };
-		962259BD16240AA600711EB2 /* delivery.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B716240AA600711EB2 /* delivery.png */; };
-		962259BE16240AA600711EB2 /* messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B816240AA600711EB2 /* messages.png */; };
-		962259BF16240AA600711EB2 /* myFiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259B916240AA600711EB2 /* myFiles.png */; };
-		962259C016240AA600711EB2 /* orders.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259BA16240AA600711EB2 /* orders.png */; };
-		962259C116240AA600711EB2 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 962259BB16240AA600711EB2 /* profile.png */; };
 		962259C416240E7700711EB2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C316240E7700711EB2 /* ProfileViewController.m */; };
 		962259C71624102F00711EB2 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C61624102F00711EB2 /* MessagesViewController.m */; };
 		962259CA1624104100711EB2 /* BalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259C91624104100711EB2 /* BalanceViewController.m */; };
@@ -45,6 +40,16 @@
 		962259F91624AF9B00711EB2 /* TestAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259F81624AF9B00711EB2 /* TestAPIClient.m */; };
 		962259FF1624B8FD00711EB2 /* TwoLabelsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */; };
 		96225A021624C5EF00711EB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96225A011624C5EE00711EB2 /* LoginViewController.m */; };
+		96329E9816270F6A00B5E08D /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96329E9716270F6900B5E08D /* MessageTableViewCell.m */; };
+		96329EA3162715B400B5E08D /* zakaz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9A162715B300B5E08D /* zakaz@2x.png */; };
+		96329EA4162715B400B5E08D /* zakaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9B162715B300B5E08D /* zakaz.png */; };
+		96329EA5162715B400B5E08D /* profil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9C162715B300B5E08D /* profil@2x.png */; };
+		96329EA6162715B400B5E08D /* profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9D162715B300B5E08D /* profil.png */; };
+		96329EA7162715B400B5E08D /* dostavka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9E162715B300B5E08D /* dostavka@2x.png */; };
+		96329EA8162715B400B5E08D /* dostavka.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329E9F162715B300B5E08D /* dostavka.png */; };
+		96329EA9162715B400B5E08D /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA0162715B300B5E08D /* chat@2x.png */; };
+		96329EAA162715B400B5E08D /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA1162715B300B5E08D /* chat.png */; };
+		96329EAB162715B400B5E08D /* balance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA2162715B400B5E08D /* balance@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,11 +73,6 @@
 		962259B21624080E00711EB2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		962259B31624080E00711EB2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		962259B616240AA600711EB2 /* balance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balance.png; sourceTree = "<group>"; };
-		962259B716240AA600711EB2 /* delivery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delivery.png; sourceTree = "<group>"; };
-		962259B816240AA600711EB2 /* messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messages.png; sourceTree = "<group>"; };
-		962259B916240AA600711EB2 /* myFiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFiles.png; sourceTree = "<group>"; };
-		962259BA16240AA600711EB2 /* orders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orders.png; sourceTree = "<group>"; };
-		962259BB16240AA600711EB2 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		962259C216240E7700711EB2 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		962259C316240E7700711EB2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		962259C51624102E00711EB2 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
@@ -110,6 +110,17 @@
 		962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLabelsCustomCell.m; sourceTree = "<group>"; };
 		96225A001624C5EE00711EB2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		96225A011624C5EE00711EB2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		96329E9616270F6900B5E08D /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		96329E9716270F6900B5E08D /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		96329E9A162715B300B5E08D /* zakaz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zakaz@2x.png"; sourceTree = "<group>"; };
+		96329E9B162715B300B5E08D /* zakaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zakaz.png; sourceTree = "<group>"; };
+		96329E9C162715B300B5E08D /* profil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profil@2x.png"; sourceTree = "<group>"; };
+		96329E9D162715B300B5E08D /* profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profil.png; sourceTree = "<group>"; };
+		96329E9E162715B300B5E08D /* dostavka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dostavka@2x.png"; sourceTree = "<group>"; };
+		96329E9F162715B300B5E08D /* dostavka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dostavka.png; sourceTree = "<group>"; };
+		96329EA0162715B300B5E08D /* chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat@2x.png"; sourceTree = "<group>"; };
+		96329EA1162715B300B5E08D /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		96329EA2162715B400B5E08D /* balance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balance@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +229,8 @@
 				962259FE1624B8FC00711EB2 /* TwoLabelsCustomCell.m */,
 				96225A001624C5EE00711EB2 /* LoginViewController.h */,
 				96225A011624C5EE00711EB2 /* LoginViewController.m */,
+				96329E9616270F6900B5E08D /* MessageTableViewCell.h */,
+				96329E9716270F6900B5E08D /* MessageTableViewCell.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,12 +238,16 @@
 		962259B516240AA600711EB2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				96329E9A162715B300B5E08D /* zakaz@2x.png */,
+				96329E9B162715B300B5E08D /* zakaz.png */,
+				96329E9C162715B300B5E08D /* profil@2x.png */,
+				96329E9D162715B300B5E08D /* profil.png */,
+				96329E9E162715B300B5E08D /* dostavka@2x.png */,
+				96329E9F162715B300B5E08D /* dostavka.png */,
+				96329EA0162715B300B5E08D /* chat@2x.png */,
+				96329EA1162715B300B5E08D /* chat.png */,
+				96329EA2162715B400B5E08D /* balance@2x.png */,
 				962259B616240AA600711EB2 /* balance.png */,
-				962259B716240AA600711EB2 /* delivery.png */,
-				962259B816240AA600711EB2 /* messages.png */,
-				962259B916240AA600711EB2 /* myFiles.png */,
-				962259BA16240AA600711EB2 /* orders.png */,
-				962259BB16240AA600711EB2 /* profile.png */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -342,11 +359,15 @@
 				962259AB1624059D00711EB2 /* icon.png in Resources */,
 				962259AD162405B300711EB2 /* icon@2x.png in Resources */,
 				962259BC16240AA600711EB2 /* balance.png in Resources */,
-				962259BD16240AA600711EB2 /* delivery.png in Resources */,
-				962259BE16240AA600711EB2 /* messages.png in Resources */,
-				962259BF16240AA600711EB2 /* myFiles.png in Resources */,
-				962259C016240AA600711EB2 /* orders.png in Resources */,
-				962259C116240AA600711EB2 /* profile.png in Resources */,
+				96329EA3162715B400B5E08D /* zakaz@2x.png in Resources */,
+				96329EA4162715B400B5E08D /* zakaz.png in Resources */,
+				96329EA5162715B400B5E08D /* profil@2x.png in Resources */,
+				96329EA6162715B400B5E08D /* profil.png in Resources */,
+				96329EA7162715B400B5E08D /* dostavka@2x.png in Resources */,
+				96329EA8162715B400B5E08D /* dostavka.png in Resources */,
+				96329EA9162715B400B5E08D /* chat@2x.png in Resources */,
+				96329EAA162715B400B5E08D /* chat.png in Resources */,
+				96329EAB162715B400B5E08D /* balance@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +399,7 @@
 				962259F91624AF9B00711EB2 /* TestAPIClient.m in Sources */,
 				962259FF1624B8FD00711EB2 /* TwoLabelsCustomCell.m in Sources */,
 				96225A021624C5EF00711EB2 /* LoginViewController.m in Sources */,
+				96329E9816270F6A00B5E08D /* MessageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

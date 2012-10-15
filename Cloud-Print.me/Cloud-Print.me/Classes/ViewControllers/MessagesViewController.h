@@ -10,4 +10,6 @@
 
 @interface MessagesViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *messages;
+
 @end

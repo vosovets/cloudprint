@@ -20,7 +20,7 @@ static NSString *__userEmail = nil;
                failure:(void (^)(NSError *))failureBlock {
     __userEmail = email;
     
-    int64_t delayInSeconds = 1.0;
+    CGFloat delayInSeconds = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         successBlock(@{@"token": @"1421423-31432423-324324-13243241"});
@@ -30,7 +30,7 @@ static NSString *__userEmail = nil;
 - (void)logoutWithSuccess:(void (^)(NSDictionary *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
     
-    int64_t delayInSeconds = 1.0;
+    CGFloat delayInSeconds = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         successBlock(@{});
@@ -57,7 +57,7 @@ static NSString *__userEmail = nil;
     @{@"Получатель": @""}]};
     
     
-    int64_t delayInSeconds = 1.0;
+    CGFloat delayInSeconds = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         successBlock(response);
@@ -67,6 +67,16 @@ static NSString *__userEmail = nil;
 - (void)messagesWithSuccess:(void (^)(NSArray *))successBlock
                     failure:(void (^)(NSError *))failureBlock {
     
+    NSArray *response = @[
+    @{@"description": @"Уведомление о посылке", @"date": @"05.10.2012 09:35"},
+    @{@"description": @"Выставление счетов для оплаты по безналичному расчету ", @"date": @"02.10.2012 11:42"},
+    @{@"description": @"Бонус 1% по программе лояльности CloudPRINT Club ", @"date": @"	01.10.2012 07:32"}];
+    
+    CGFloat delayInSeconds = 0.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        successBlock(response);
+    });
 }
 
 - (void)balanceWithSuccess:(void (^)(NSDictionary *))successBlock

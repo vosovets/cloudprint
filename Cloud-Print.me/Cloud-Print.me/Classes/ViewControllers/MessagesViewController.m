@@ -7,10 +7,8 @@
 //
 
 #import "MessagesViewController.h"
-
-@interface MessagesViewController ()
-
-@end
+#import "MessageTableViewCell.h"
+#import "APIClient.h"
 
 @implementation MessagesViewController
 
@@ -42,28 +40,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[APIClient sharedClient] messagesWithSuccess:^(NSArray *response) {
+        self.messages = response;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
 }
+
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.messages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"MessageCellID";
+    MessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSDictionary *message = self.messages[indexPath.row];
+    
+    cell.messageDescription.text = message[@"description"];
+    cell.messageDate.text = message[@"date"];
     
     return cell;
 }
