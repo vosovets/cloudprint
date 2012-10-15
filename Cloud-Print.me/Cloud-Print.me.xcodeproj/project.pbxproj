@@ -50,6 +50,7 @@
 		96329EA9162715B400B5E08D /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA0162715B300B5E08D /* chat@2x.png */; };
 		96329EAA162715B400B5E08D /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA1162715B300B5E08D /* chat.png */; };
 		96329EAB162715B400B5E08D /* balance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96329EA2162715B400B5E08D /* balance@2x.png */; };
+		96B17BAC162BF6B2001EA486 /* BalanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B17BAB162BF6B2001EA486 /* BalanceTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,8 @@
 		96329EA0162715B300B5E08D /* chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat@2x.png"; sourceTree = "<group>"; };
 		96329EA1162715B300B5E08D /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		96329EA2162715B400B5E08D /* balance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "balance@2x.png"; sourceTree = "<group>"; };
+		96B17BAA162BF6B2001EA486 /* BalanceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceTableViewCell.h; sourceTree = "<group>"; };
+		96B17BAB162BF6B2001EA486 /* BalanceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 				96225A011624C5EE00711EB2 /* LoginViewController.m */,
 				96329E9616270F6900B5E08D /* MessageTableViewCell.h */,
 				96329E9716270F6900B5E08D /* MessageTableViewCell.m */,
+				96B17BAA162BF6B2001EA486 /* BalanceTableViewCell.h */,
+				96B17BAB162BF6B2001EA486 /* BalanceTableViewCell.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				962259FF1624B8FD00711EB2 /* TwoLabelsCustomCell.m in Sources */,
 				96225A021624C5EF00711EB2 /* LoginViewController.m in Sources */,
 				96329E9816270F6A00B5E08D /* MessageTableViewCell.m in Sources */,
+				96B17BAC162BF6B2001EA486 /* BalanceTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

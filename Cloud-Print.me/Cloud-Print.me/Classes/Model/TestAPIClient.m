@@ -79,14 +79,32 @@ static NSString *__userEmail = nil;
     });
 }
 
-- (void)balanceWithSuccess:(void (^)(NSDictionary *))successBlock
+- (void)balanceWithSuccess:(void (^)(NSArray *))successBlock
                    failure:(void (^)(NSError *))failureBlock {
+    NSArray *response = @[
+    @{@"title": @"Корректировка баланса", @"date": @"05.10.2012 09:35", @"balance":@"-5000 грн.", @"comment": @"Отправка посылки"},
+    @{@"title": @"Покупка посылки", @"date": @"05.10.2012 10:35", @"balance":@"5000 грн.", @"comment": @"Посылка"}];
     
+    CGFloat delayInSeconds = 0.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        successBlock(response);
+    });
 }
 
 - (void)ordersWithSuccess:(void (^)(NSArray *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
+    NSArray *response = @[
+    @{@"description": @"Уведомление о посылке", @"date": @"05.10.2012 09:35"},
+    @{@"description": @"Выставление счетов для оплаты по безналичному расчету ", @"date": @"02.10.2012 11:42"},
+    @{@"description": @"Бонус 1% по программе лояльности CloudPRINT Club ", @"date": @"	01.10.2012 07:32"}];
     
+    CGFloat delayInSeconds = 0.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        successBlock(response);
+    });
+
 }
 
 - (BOOL)isLoggedIn {

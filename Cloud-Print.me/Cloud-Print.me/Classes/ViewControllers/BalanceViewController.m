@@ -7,12 +7,12 @@
 //
 
 #import "BalanceViewController.h"
+#import "BalanceTableViewCell.h"
+#import "APIClient.h"
 
-@interface BalanceViewController ()
-
-@end
-
-@implementation BalanceViewController
+@implementation BalanceViewController {
+    NSArray *_transactions;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,28 +42,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[APIClient sharedClient] balanceWithSuccess:^(NSArray *response) {
+        _transactions = response;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        // TODO: show error
+    }];
 }
+
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_transactions count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"BalanceCell";
+    BalanceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NSDictionary *transaction = _transactions[indexPath.row];
     // Configure the cell...
+//    @{@"title": @"", @"date": @"05.10.2012 09:35", @"balance":@"-5000 грн.", @"comment": @"Отправка посылки"}];
+    cell.titleLabel.text = transaction[@"title"];
+    cell.timeLabel.text = transaction[@"date"];
+    cell.amountMoneyLabel.text = transaction[@"balance"];
+    cell.commentLabel.text = transaction[@"comment"];
+    
+    
+    // apply color for money
+    NSRange foundNegativeSymbol = [[transaction objectForKey:@"balance"] rangeOfString:@"-"];
+    Debug(@"%@", NSStringFromRange(foundNegativeSymbol));
+    
+    if (NSEqualRanges(foundNegativeSymbol, NSMakeRange(NSNotFound, 0))) {
+        cell.amountMoneyLabel.textColor = [UIColor greenColor];
+    } else {
+        cell.amountMoneyLabel.textColor = [UIColor redColor];
+    }
     
     return cell;
 }

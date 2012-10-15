@@ -39,7 +39,7 @@ typedef enum StatusCodeError {
 - (void)messagesWithSuccess:(void (^)(NSArray *))successBlock
                     failure:(void (^)(NSError *))failureBlock;
 
-- (void)balanceWithSuccess:(void (^)(NSDictionary *))successBlock
+- (void)balanceWithSuccess:(void (^)(NSArray *))successBlock
                    failure:(void (^)(NSError *))failureBlock;
 
 - (void)ordersWithSuccess:(void (^)(NSArray *))successBlock
