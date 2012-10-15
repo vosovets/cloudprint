@@ -7,12 +7,12 @@
 //
 
 #import "OrdersViewController.h"
+#import "OrderTableViewCell.h"
+#import "APIClient.h"
 
-@interface OrdersViewController ()
-
-@end
-
-@implementation OrdersViewController
+@implementation OrdersViewController {
+    NSArray *_orders;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,28 +42,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[APIClient sharedClient] ordersWithSuccess:^(NSArray *response) {
+        _orders = response;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        // TODO: show error
+    }];
 }
+
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_orders count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"OrderCell";
+    OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NSDictionary *order = _orders[indexPath.row];
     // Configure the cell...
+    // @{@"orderId": @"2200", @"date": @"05.10.2012 09:35", @"money":@"-5000 грн.", @"files": @"Отправка посылки",
+//    @"orderStatus": @"", @"mockupStatus": @"", @"deliveryStatus": @"", @"notes": @""}];
+//
+    cell.orderNumberLabel.text = order[@"orderId"];
+    cell.dateLabel.text = order[@"date"];
+    cell.moneyLabel.text = order[@"money"];
+    
     
     return cell;
 }

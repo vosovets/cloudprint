@@ -95,9 +95,12 @@ static NSString *__userEmail = nil;
 - (void)ordersWithSuccess:(void (^)(NSArray *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
     NSArray *response = @[
-    @{@"description": @"Уведомление о посылке", @"date": @"05.10.2012 09:35"},
-    @{@"description": @"Выставление счетов для оплаты по безналичному расчету ", @"date": @"02.10.2012 11:42"},
-    @{@"description": @"Бонус 1% по программе лояльности CloudPRINT Club ", @"date": @"	01.10.2012 07:32"}];
+    @{@"orderId": @"Заказ №2200", @"date": @"05.10.2012 09:35", @"money":@"500 грн.", @"files": @"File 1, File 2, File 3",
+    @"orderStatus": @"", @"mockupStatus": @"", @"deliveryStatus": @"", @"notes": @""},
+    @{@"orderId": @"Заказ №2201", @"date": @"05.09.2012 09:35", @"money":@"100 грн.", @"files": @"File 1, File 2, File 3",
+    @"orderStatus": @"", @"mockupStatus": @"", @"deliveryStatus": @"", @"notes": @""},
+    @{@"orderId": @"Заказ №2202", @"date": @"05.08.2012 09:35", @"money":@"300 грн.", @"files": @"File 1, File 2, File 3",
+    @"orderStatus": @"", @"mockupStatus": @"", @"deliveryStatus": @"", @"notes": @""}];
     
     CGFloat delayInSeconds = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
