@@ -49,7 +49,32 @@
     Debug(@"User email: %@", [[APIClient sharedClient] userEmail]);
     
     if (![[APIClient sharedClient] isLoggedIn]) {
-        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+        
+        NSDictionary *credens = [[APIClient sharedClient] storedCredentials];
+        // auto login
+        if (credens) {
+            [[APIClient sharedClient] loginWithEmail:credens[@"email"] password:credens[@"password"] withSuccess:^(NSDictionary *response) {
+                Debug(@"Works: %@", credens);
+            } failure:^(NSError *error) {
+                
+                 NSString *title = nil;
+                 if (error.code ==  StatusCodeLogicError) {
+                     title = @"Ошибка";
+                 } else if (error.code == StatusCodeServerError) {
+                     // internet connection or server error
+                     title = @"Server error";
+                     error = [NSError errorWithDomain:@"Server is not available. Check your internet connection or try to contact support." code:error.code userInfo:error.userInfo];
+                 } else {
+                     title = [NSString stringWithFormat:@"Error code: %d", error.code];
+                 }
+                 
+                 [[[UIAlertView alloc] initWithTitle:title message:error.domain
+                                            delegate:nil
+                                   cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }];
+        } else {
+            [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+        }
     } else {
         _userNameLabel.text = [[APIClient sharedClient] userEmail];
     }

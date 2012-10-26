@@ -12,11 +12,14 @@
 
 @interface ProfileViewController ()
 
-@property (nonatomic, strong) NSArray *userInfo;
+@property (nonatomic, strong) NSDictionary *userInfo;
 
 @end
 
-@implementation ProfileViewController
+@implementation ProfileViewController {
+    NSArray *_listOfKeys;
+    NSArray *_listOfTitles;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,6 +41,21 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBarHidden = NO;
     [self.navigationItem setTitle:@"Профайл"];
+    
+    /*
+    address = "L.Svobody av.";
+    cell = "+380675758599";
+    deliveryAddress = "L.Svobody av.";
+    deliveryRecipient = "  ";
+    deliveryService = "";
+    deliveryWarehouse = "";
+    email = "frp.omnia@gmail.com";
+    name = "Tatyana, Omnia";
+    phone = "+380675758599";
+     */
+    
+    _listOfKeys = @[@"name", @"email", @"cell", @"phone", @"address", @"deliveryAddress", @"deliveryRecipient", @"deliveryService", @"deliveryWarehouse"];
+    _listOfTitles = @[@"ФИО:", @"Email:", @"Моб. телефон", @"Домашний телефон:", @"Адрес:", @"Адрес доставки:", @"ФИО получателя:", @"Сервис доставки:", @"Номер склада доставки:"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,11 +70,13 @@
     __weak ProfileViewController *weakSelf = self;
     
     [[APIClient sharedClient] userProfileWithSuccess:^(NSDictionary *response) {
-        weakSelf.userInfo = response[@"userInfo"];
+        Debug(@"Response: %@", response);
+        weakSelf.userInfo = response;
         [self.tableView reloadData];
         
     } failure:^(NSError *error) {
         // TODO: show error
+        [self showAlertViewWithError:error];
     }];
 }
 
@@ -70,7 +90,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.userInfo ? [self.userInfo count]: 0;
+    Debug(@"Count: %d", [[self.userInfo allKeys] count]);
+    return [[self.userInfo allKeys] count] ? [[self.userInfo allKeys] count]: 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,11 +99,9 @@
     static NSString *CellIdentifier = @"ProfileTableCell";
     TwoLabelsCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *info = [self.userInfo objectAtIndex:indexPath.row];
-    
     // Configure the cell...
-    cell.firstLabel.text = [[info allKeys] objectAtIndex:0];
-    cell.secondLabel.text = [info valueForKey:cell.firstLabel.text];
+    cell.firstLabel.text = _listOfTitles[indexPath.row];
+    cell.secondLabel.text = self.userInfo[_listOfKeys[indexPath.row]];
     
     return cell;
 }

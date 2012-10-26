@@ -14,7 +14,7 @@
 
 #import "TestAPIClient.h"
 
-NSString * const kBaseURLString = @"http://www.cat-tie.ru";
+NSString * const kBaseURLString = @"http://cloud-print.me";
 
 static NSString *__sessionToken = nil;
 static NSString *__userEmail = nil;
@@ -56,6 +56,18 @@ static NSString *__userEmail = nil;
            withSuccess:(void (^)(NSDictionary *))successBlock
                failure:(void (^)(NSError *))failureBlock {
     __userEmail = email;
+    
+    __block APIClient *weakSelf = self;
+    
+     [self sendToPath:@"login.php"
+             userData:@{@"email": email, @"password": password}
+              success:^(id response) {
+                  if (![weakSelf storedCredentials]) {
+                      [weakSelf saveCredentials:email password:password];
+                  }
+                  
+                  successBlock(response);
+              } failure:failureBlock check:nil];
 }
 
 - (void)logoutWithSuccess:(void (^)(NSDictionary *))successBlock
@@ -68,6 +80,11 @@ static NSString *__userEmail = nil;
 - (void)userProfileWithSuccess:(void (^)(NSDictionary *))successBlock
                        failure:(void (^)(NSError *))failureBlock {
     
+    [self sendToPath:@"profile.php"
+            userData:nil
+             success:successBlock
+             failure:failureBlock
+               check:nil];
 }
 
 - (void)messagesWithSuccess:(void (^)(NSArray *))successBlock
@@ -75,7 +92,7 @@ static NSString *__userEmail = nil;
     
 }
 
-- (void)balanceWithSuccess:(void (^)(NSDictionary *))successBlock
+- (void)balanceWithSuccess:(void (^)(NSArray *))successBlock
                    failure:(void (^)(NSError *))failureBlock {
     
 }
@@ -93,10 +110,17 @@ static NSString *__userEmail = nil;
            failure:(void (^)(NSError *))failureBlock
              check:(BOOL (^)(id))checkBlock {
     
+    // TODO: add token where it is needed
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:userData];
+    
+    if (__sessionToken) {
+        [params setValue:__sessionToken forKey:@"token"];
+    }
+    
     // define error
     __block NSError *error = nil;
     
-    NSURLRequest *request = [self requestWithMethod:@"GET" path:path parameters:userData];
+    NSURLRequest *request = [self requestWithMethod:@"GET" path:[NSString stringWithFormat:@"api/%@", path] parameters:params];
 
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -107,6 +131,16 @@ static NSString *__userEmail = nil;
         Debug(@"\n\nRequest1: %@, %@", path, userData);
         Debug(@"\n\nRequest2: %@", request);
         Debug(@"Result: %@, %@", obj, responseObject);
+        
+        // general check
+        
+        if ([obj[@"status"] isEqualToString:@"err"]) {
+            NSError *anError = [[NSError alloc] initWithDomain:obj[@"message"]
+                                                          code:StatusCodeLogicError
+                                                      userInfo:obj];
+            failureBlock(anError);
+            return;
+        }
             
         // pre-check
         if (checkBlock && !checkBlock(obj)) {
@@ -116,8 +150,11 @@ static NSString *__userEmail = nil;
             failureBlock(anError);
             return;
         }
+        
+        // save token for next request
+        __sessionToken = (obj[@"token"] && ![obj[@"token"] isEqualToString:@""]) ? obj[@"token"] : nil;
             
-        successBlock(obj);
+        successBlock(obj[@"response"]);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         Debug(@"\n\nRequest: %@, %@", path, userData);
@@ -149,6 +186,26 @@ static NSString *__userEmail = nil;
 
 - (NSString *)userEmail {
     return __userEmail;
+}
+
+#pragma mark - Credentials
+
+- (NSDictionary *)storedCredentials {
+    return [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"userCredentials"];
+}
+
+- (void)saveCredentials:(NSString *)email password:(NSString *)password {
+    NSUserDefaults *userDefs = [NSUserDefaults standardUserDefaults];
+    
+    [userDefs setObject:@{@"email": email, @"password": password} forKey:@"userCredentials"];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [userDefs synchronize];
+    });
+}
+
+- (void)cleanCredentials {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userCredentials"];
 }
 
 @end

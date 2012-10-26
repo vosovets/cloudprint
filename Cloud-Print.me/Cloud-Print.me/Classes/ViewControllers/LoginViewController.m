@@ -29,6 +29,27 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DefaultBackground.png"]];
+    
+    
+    // ONLY for testing:
+    _emailTextField.text = @"frp.omnia@gmail.com";
+    _passwordTextField.text = @"www12345";
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // auto logout when we show this controller
+    if ([[APIClient sharedClient] storedCredentials]) {
+        [[APIClient sharedClient] cleanCredentials];
+        
+        [[APIClient sharedClient] logoutWithSuccess:^(NSDictionary *response) {
+            Debug(@"%@", response);
+        } failure:^(NSError *error) {
+            [self showAlertViewWithError:error];
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +83,7 @@
                                  withSuccess:^(NSDictionary *response) {
         [self dismissModalViewControllerAnimated:YES];
     } failure:^(NSError *error) {
-
+        [self showAlertViewWithError:error];
     }];
 }
 

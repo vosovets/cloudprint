@@ -22,3 +22,5 @@ fprintf(stderr,"%s\t%s\n", [dbgTitle UTF8String], [dbgMessage UTF8String]);\
 #else
 #define Debug(s, ...)
 #endif
+
+#import "UIViewController+Alerts.h"

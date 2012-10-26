@@ -14,7 +14,7 @@ static NSString *__userEmail = nil;
 
 #pragma mark - Login & Logout
 
-- (void)loginWithEmail:(NSString *)email
+/*- (void)loginWithEmail:(NSString *)email
               password:(NSString *)password
            withSuccess:(void (^)(NSDictionary *))successBlock
                failure:(void (^)(NSError *))failureBlock {
@@ -25,7 +25,7 @@ static NSString *__userEmail = nil;
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         successBlock(@{@"token": @"1421423-31432423-324324-13243241"});
     });
-}
+}*/
 
 - (void)logoutWithSuccess:(void (^)(NSDictionary *))successBlock
                   failure:(void (^)(NSError *))failureBlock {
@@ -39,7 +39,7 @@ static NSString *__userEmail = nil;
 
 #pragma mark - Functionality
 
-- (void)userProfileWithSuccess:(void (^)(NSDictionary *))successBlock
+/*- (void)userProfileWithSuccess:(void (^)(NSDictionary *))successBlock
                        failure:(void (^)(NSError *))failureBlock {
     
     NSDictionary *response = @{@"userInfo":
@@ -62,7 +62,7 @@ static NSString *__userEmail = nil;
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         successBlock(response);
     });
-}
+}*/
 
 - (void)messagesWithSuccess:(void (^)(NSArray *))successBlock
                     failure:(void (^)(NSError *))failureBlock {

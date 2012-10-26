@@ -18,7 +18,7 @@
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Здравствуйте," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA4-mf-nxH">
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="207" id="QBr-JH-HP2"/>
+                                        <constraint firstAttribute="width" constant="207" id="9v1-s0-qTg"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,13 +32,31 @@
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ix-6i-cSX">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="9kl-cA-JZr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" backgroundImage="gnome_session_logout.png">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="bua-oM-HRe" kind="modal" modalTransitionStyle="flipHorizontal" id="n7H-M1-ZwJ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="GA4-mf-nxH" firstAttribute="centerX" secondItem="hxX-mr-gac" secondAttribute="centerX" type="default" id="G4R-QG-NZh"/>
+                                <constraint firstItem="7Ix-6i-cSX" firstAttribute="bottom" secondItem="hxX-mr-gac" secondAttribute="bottom" type="default" id="Pfk-oM-Ayq"/>
+                                <constraint firstItem="7Ix-6i-cSX" firstAttribute="centerY" secondItem="lZF-CJ-qmJ" secondAttribute="centerY" type="default" id="Q4U-d0-7w1"/>
                                 <constraint firstItem="hxX-mr-gac" firstAttribute="top" secondItem="GA4-mf-nxH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aOD-uw-or8"/>
-                                <constraint firstItem="GA4-mf-nxH" firstAttribute="centerX" secondItem="lZF-CJ-qmJ" secondAttribute="centerX" type="default" id="hjz-hU-Z3d"/>
-                                <constraint firstItem="GA4-mf-nxH" firstAttribute="top" secondItem="lZF-CJ-qmJ" secondAttribute="top" constant="6" id="vLx-Qz-XVG"/>
+                                <constraint firstAttribute="trailing" secondItem="7Ix-6i-cSX" secondAttribute="trailing" constant="8" id="ceZ-kb-ygV"/>
+                                <constraint firstItem="GA4-mf-nxH" firstAttribute="centerX" secondItem="lZF-CJ-qmJ" secondAttribute="centerX" type="default" id="lmt-ZZ-ARj"/>
                             </constraints>
                         </view>
                         <sections>
@@ -432,31 +450,33 @@
         <scene sceneID="8TL-Nm-YBU">
             <objects>
                 <tableViewController title="Profile" id="atr-8U-1Sa" customClass="ProfileViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="adT-vg-aVO">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="59" sectionHeaderHeight="22" sectionFooterHeight="22" id="adT-vg-aVO">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableCell" id="e9y-2e-ANh" customClass="TwoLabelsCustomCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableCell" rowHeight="59" id="e9y-2e-ANh" customClass="TwoLabelsCustomCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnG-K9-EE5">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="94" id="VKq-g6-oo8"/>
+                                                <constraint firstAttribute="height" constant="33" id="O38-zg-L7p"/>
+                                                <constraint firstAttribute="width" constant="225" id="yNR-FX-Z7a"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-1h-RSd">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-1h-RSd">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="184" id="Tlh-f3-Dka"/>
+                                                <constraint firstAttribute="height" constant="21" id="8re-H8-3AF"/>
+                                                <constraint firstAttribute="width" constant="291" id="oQL-10-bKI"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -464,10 +484,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="yOh-1h-RSd" firstAttribute="leading" secondItem="HnG-K9-EE5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="agL-R1-QYb"/>
-                                    <constraint firstItem="yOh-1h-RSd" firstAttribute="baseline" secondItem="HnG-K9-EE5" secondAttribute="baseline" type="default" id="mqm-mm-4yr"/>
-                                    <constraint firstItem="HnG-K9-EE5" firstAttribute="leading" secondItem="e9y-2e-ANh" secondAttribute="leading" constant="20" type="default" id="tkz-T5-azt"/>
-                                    <constraint firstItem="HnG-K9-EE5" firstAttribute="top" secondItem="e9y-2e-ANh" secondAttribute="top" constant="11" id="wKs-pr-dZi"/>
+                                    <constraint firstItem="HnG-K9-EE5" firstAttribute="leading" secondItem="e9y-2e-ANh" secondAttribute="leading" constant="10" id="3gl-Xd-kXi"/>
+                                    <constraint firstItem="yOh-1h-RSd" firstAttribute="leading" secondItem="e9y-2e-ANh" secondAttribute="leading" constant="20" type="default" id="J7X-bb-HyV"/>
+                                    <constraint firstItem="HnG-K9-EE5" firstAttribute="top" secondItem="e9y-2e-ANh" secondAttribute="top" constant="5" id="K4C-5h-ejh"/>
+                                    <constraint firstItem="yOh-1h-RSd" firstAttribute="top" secondItem="e9y-2e-ANh" secondAttribute="top" constant="29" id="YRb-55-cOS"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="firstLabel" destination="HnG-K9-EE5" id="7OE-dr-3zT"/>
@@ -633,6 +653,7 @@ ENCb0L7Qs9C40L0
         <image name="balance.png" width="50" height="50"/>
         <image name="chat.png" width="50" height="50"/>
         <image name="dostavka.png" width="50" height="50"/>
+        <image name="gnome_session_logout.png" width="48" height="48"/>
         <image name="profil.png" width="50" height="50"/>
         <image name="zakaz.png" width="50" height="50"/>
     </resources>
@@ -696,4 +717,7 @@ ENCb0L7Qs9C40L0
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="n7H-M1-ZwJ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -50,4 +50,10 @@ typedef enum StatusCodeError {
 - (BOOL)isLoggedIn;
 - (NSString *)userEmail;
 
+#pragma mark - Credentials
+
+- (NSDictionary *)storedCredentials;
+- (void)saveCredentials:(NSString *)email password:(NSString *)password;
+- (void)cleanCredentials;
+
 @end
